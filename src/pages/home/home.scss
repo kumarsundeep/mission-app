@@ -1,3 +1,40 @@
 page-home {
+  .page-header-container{
+    position: relative;
+  }
+  .page-header{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    .title-container{
+      margin: 0;
+      display: flex;
+      //max-width: 60%;
+      font-size: 1.1em;
+      ion-select{
+        max-width: 100%;
+        &.select-md,
+        &.select-ios{
+          padding-left: 6px;
+        }
 
+      }
+    }
+    .filter-container{
+      display: flex;
+      justify-content: flex-end;
+      ion-icon{
+        line-height: 40px;
+        font-size: 1.3em;
+        margin-right: -8px;
+      }
+    }
+    .filter-select{
+      //max-width: 40%;
+      ion-select{
+        max-width: 100%;
+      }
+    }
+  }
 }
+

@@ -1,12 +1,166 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+    <div>
+
+    </div>
+
+    <!--
     <ion-title>Home</ion-title>
+    -->
   </ion-navbar>
 </ion-header>
 
+<ion-content>
+  <ion-grid class="page-header-container">
+    <ion-row class="page-header">
+      <ion-col text-left>
+        <h2 class="title-container">
+          <ion-select [(ngModel)]="timePeriod" interface="action-sheet">
+            <ion-option value="today">Today's Mission</ion-option>
+            <ion-option value="yesterday">Yesterday's Mission</ion-option>
+            <ion-option value="week">This Week's Mission</ion-option>
+            <ion-option value="month">This Month's Mission Genesis</ion-option>
+            <ion-option value="year">Year's Mission</ion-option>
+          </ion-select>
+        </h2>
+      </ion-col>
+      <ion-col text-right>
+        <div class="filter-container">
+          <ion-icon name="funnel" color="secondary"></ion-icon>
+          <div class="filter-select">
+            <ion-select [(ngModel)]="itemList" interface="popover">
+              <ion-option value="all">All</ion-option>
+              <ion-option value="contests">Contests</ion-option>
+              <ion-option value="challenges">Challenges</ion-option>
+              <ion-option value="others">Others</ion-option>
+            </ion-select>
+          </div>
+        </div>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ion-list-header>
+      Contests
+    </ion-list-header>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/food.svg">
+      </ion-avatar>
+      <h2>Lunch Attentiveness Contest</h2>
+      <p>Some Lunch Attentiveness Contest description...</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/food.svg">
+      </ion-avatar>
+      <h2>Dinner Attentiveness Contest</h2>
+      <p>Some Dinner Attentiveness Contest description...</p>
+    </ion-item>
+
+
+
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      Challenges
+    </ion-list-header>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/pace.svg">
+      </ion-avatar>
+      <h2>Pace Challenge</h2>
+      <p>Some Pace Challenge description over here...</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/money.svg">
+      </ion-avatar>
+      <h2>PPA Challenge</h2>
+      <p>Some PPA Challenge description over here...</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/money.svg">
+      </ion-avatar>
+      <h2>PPA Challenge Lunch</h2>
+      <p>Some PPA Challenge Lunch over here...</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/money.svg">
+      </ion-avatar>
+      <h2>PPA Challenge Dinner</h2>
+      <p>Some PPA Challenge Dinner description over here...</p>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      Others
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/sales.svg">
+      </ion-avatar>
+      <h2>Perfect Marg Sales</h2>
+      <p>Some Perfect Marg Sales description over here...</p>
+    </ion-item>
+  </ion-list>
+<!--
+  <ion-list>
+    <ion-list-header>
+      Online
+    </ion-list-header>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/avatar-poe.png">
+      </ion-avatar>
+      <h2>Poe</h2>
+      <h3>New Ride</h3>
+      <p>I just upgraded my X-Wing. Next time...</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/avatar-ben.png">
+      </ion-avatar>
+      <h2>Ben</h2>
+      <h3>Move Along</h3>
+      <p>These aren't the droids you're looking for...</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/avatar-leia.png">
+      </ion-avatar>
+      <h2>Leia</h2>
+      <h3>You're My Only Hope</h3>
+      <p>I've placed information vital to the survival...</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/avatar-yoda.png">
+      </ion-avatar>
+      <h2>Yoda</h2>
+      <h3>Size matters not</h3>
+      <p>Do or do not. There is no try...</p>
+    </ion-item>
+  </ion-list>
+  -->
+</ion-content>
+
+<!--
 <ion-content padding>
   <h3>Ionic Menu Starter</h3>
 
@@ -16,3 +170,4 @@
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>
+-->
