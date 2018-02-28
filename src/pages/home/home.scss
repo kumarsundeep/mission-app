@@ -1,22 +1,114 @@
 page-home {
+  .header-md::after{
+    background-image: none;
+  }
+  .header-ios .toolbar-ios:last-child .toolbar-background-ios{
+    border-width: 0;
+  }
+  ion-navbar[color="primary"] {
+    .toolbar-background-md,
+    .toolbar-background-ios{
+      background: $app-bg;
+
+    }
+  }
+
+
   .page-header-container{
     position: relative;
+    background: $app-bg;
+    padding: 16px 5px 0;
+
+
   }
   .page-header{
     display: flex;
     justify-content: space-between;
     position: relative;
+    background: url('../../assets/imgs/bg.png') no-repeat center bottom fixed;
+    background-size: cover;
+
+
+    .brand-container{
+      .brand{
+        display: inline-block;
+        border-radius: 50%;
+        width: 70px;//80px;
+        padding: 2px;
+        background: #fff;
+        margin-left: 6px;
+
+        img{
+          width: 100%;
+          border-radius: 50%;
+          height: 100%;
+        }
+      }
+      .company-details{
+        display: inline-block;
+        margin-left: 10px;
+        p{
+          margin: 0 0 3px;
+          font-size: 12px;
+          line-height: 1;
+          color: rgba(255,255,255,0.7);
+          &:first-of-type{
+            //font-weight: bold;
+            margin: 0 0 8px;
+            font-size: 16px;
+            color: rgba(255,255,255,0.99);
+          }
+        }
+      }
+      .items-list{
+        display: inline-block;
+        float: right;
+        margin: 28px 0 0;
+        background-color: rgba(255,255,255,0.21);
+        padding: 0 10px;
+        border-radius: 16px;
+      }
+    }
+
     .title-container{
       margin: 0;
       display: flex;
+      justify-content: center;
       //max-width: 60%;
-      font-size: 1.1em;
+
+      h2{
+        margin: 16px 0 -24px;
+        display: inline-block;
+        background-color: #fff;
+        border-radius: 32px;
+        padding: 0 32px;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: rgba(0,0,0,0.57);
+        -webkit-box-shadow: 0px 10px 10px 2px rgba(230,230,250,0.8);
+        -moz-box-shadow: 0px 10px 10px 2px rgba(230,230,250,0.8);
+        box-shadow: 0px 10px 10px 2px rgba(230,230,250,0.8);
+        //letter-spacing: 0.9px;
+        z-index: 1;
+      }
       ion-select{
         max-width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .select-text{
+          color: $text-primary-light;
+        }
+        .select-icon > .select-icon-inner{
+          color: $text-primary-dark;
+        }
+
+        /*
         &.select-md,
         &.select-ios{
           padding-left: 6px;
         }
+        */
 
       }
     }
@@ -24,17 +116,44 @@ page-home {
       display: flex;
       justify-content: flex-end;
       ion-icon{
-        line-height: 40px;
-        font-size: 1.3em;
-        margin-right: -8px;
+        line-height: 25px;
+        font-size: 1em;
+        margin-right: 3px;
+        //margin-right: -8px;
       }
     }
     .filter-select{
       //max-width: 40%;
       ion-select{
         max-width: 100%;
+        padding: 3px;
+
+        /deep/ {
+          .select-text{
+            color: rgba(255,255,255,0.59);
+          }
+          .select-icon{
+            .select-icon-inner{
+              color: rgba(255,255,255,0.59);
+            }
+          }
+        }
+      }
+    }
+
+
+
+
+  }
+
+  .first-header{
+    /deep/ {
+      .label-ios{
+        margin-top: 40px;
       }
     }
   }
+
+
 }
 

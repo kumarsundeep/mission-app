@@ -3,21 +3,42 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <div>
-
-    </div>
-
-    <!--
-    <ion-title>Home</ion-title>
-    -->
+    <ion-title>Missions</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
+
   <ion-grid class="page-header-container">
     <ion-row class="page-header">
-      <ion-col text-left>
-        <h2 class="title-container">
+      <ion-col class="brand-container">
+        <a class="brand">
+          <img src="../../assets/imgs/brand.png" alt="logo" />
+        </a>
+        <div class="company-details">
+          <p>Apple American Group</p>
+          <p>24 Rock Street, Omaha</p>
+          <p>(312) 245-345</p>
+        </div>
+        <div class="items-list" text-right>
+          <div class="filter-container" >
+            <ion-icon name="funnel" color="light"></ion-icon>
+            <div class="filter-select">
+              <ion-select color="light" [(ngModel)]="itemList" interface="popover">
+                <ion-option value="all">All</ion-option>
+                <ion-option value="contests">Contests</ion-option>
+                <ion-option value="challenges">Challenges</ion-option>
+                <ion-option value="others">Others</ion-option>
+              </ion-select>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+
+    </ion-row>
+    <ion-row class="page-header">
+      <ion-col class="title-container">
+        <h2>
           <ion-select [(ngModel)]="timePeriod" interface="action-sheet">
             <ion-option value="today">Today's Mission</ion-option>
             <ion-option value="yesterday">Yesterday's Mission</ion-option>
@@ -27,28 +48,13 @@
           </ion-select>
         </h2>
       </ion-col>
-      <ion-col text-right>
-        <div class="filter-container">
-          <ion-icon name="funnel" color="secondary"></ion-icon>
-          <div class="filter-select">
-            <ion-select [(ngModel)]="itemList" interface="popover">
-              <ion-option value="all">All</ion-option>
-              <ion-option value="contests">Contests</ion-option>
-              <ion-option value="challenges">Challenges</ion-option>
-              <ion-option value="others">Others</ion-option>
-            </ion-select>
-          </div>
-        </div>
-
-      </ion-col>
     </ion-row>
   </ion-grid>
 
   <ion-list>
-    <ion-list-header>
+    <ion-list-header class="first-header">
       Contests
     </ion-list-header>
-
     <ion-item>
       <ion-avatar item-start>
         <img src="../../assets/imgs/food.svg">

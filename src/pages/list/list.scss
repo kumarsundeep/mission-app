@@ -1,3 +1,15 @@
 page-list {
+  .header-md::after{
+    background-image: none;
+  }
+  .header-ios .toolbar-ios:last-child .toolbar-background-ios{
+    border-width: 0;
+  }
+  ion-navbar[color="primary"] {
+    .toolbar-background-md,
+    .toolbar-background-ios{
+      background: $app-bg;
 
+    }
+  }
 }
